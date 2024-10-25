@@ -1,0 +1,49 @@
+/* Wave Container Styles */
+.wave-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+.wave-image {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire page */
+    position: relative;
+    animation: waveMove 5s infinite ease-in-out; /* Smooth wave animation */
+    filter: blur(1px);
+}
+
+/* Keyframes for wave motion */
+@keyframes waveMove {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-10px) translateY(5px) scale(1.01);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Content over the wave */
+.content {
+    position: absolute;
+    top: 60%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+   
+    color: white; /* Adjust text color */
+}
+
+.content h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.content p {
+   width: 40%;
+    margin-top: 40px;
+}
