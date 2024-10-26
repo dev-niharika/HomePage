@@ -23,7 +23,6 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/assets/wave.mp4",
               "src/assets/bghome.mp4",
               "src/assets/bgimage.webp"
             ],
