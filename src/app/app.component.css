@@ -1,0 +1,42 @@
+/* Transparent Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: transparent; /* Make the navbar transparent */
+    z-index: 1000; /* Ensure it stays above the wave image */
+   
+    
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white; /* Adjust based on background image */
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ccc;
+}
+
+/* When you scroll, the navbar background can change */
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.7); /* Optional: Darker background on scroll */
+}
+.custnav .navbar-nav {
+    flex-direction: row; /* Ensures links are in a row */
+    gap: 15px; /* Adjusts spacing between links */
+  }
+  
+  .custnav .mx-auto {
+    display: flex;
+    justify-content: center;
+  }
+  .top{
+    position: absolute;
+    left: 7%;
+    top: 50%;
+  }
+  .tip{
+    position: absolute;
+   
+  }
+  
