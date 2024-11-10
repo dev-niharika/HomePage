@@ -23,7 +23,8 @@
             "assets": [
               "src/favicon.ico",
               "src/assets/bgimage.svg",
-              "src/assets"
+              "src/assets",
+               "src/assets/AboutBg.svg"
             ],
             "styles": [
               "src/styles.css"
