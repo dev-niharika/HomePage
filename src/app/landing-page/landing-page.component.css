@@ -26,6 +26,12 @@
     animation: slideIn 1.8s ease-out;
     color: white; /* Adjust text color */
 }
+.content1 {
+    position: absolute;
+    top: 20%;
+    right: 8%;
+  
+}
 
 @keyframes slideIn {
     from {
@@ -50,4 +56,34 @@
 }
 .green{
     color: #07b96a;
+}
+
+
+
+.image img {
+    width: 100%; /* Adjust for responsiveness */
+    max-width: 500px; /* Set max width for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    animation: slideInimage 1.8s ease-out;
+}
+
+.videocss video {
+    width: 100%; /* Adjust for responsiveness */
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+@keyframes slideInimage {
+    from {
+         /* Starts off-screen to the left */
+         transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        /* Ends centered at top: 60%; left: 35% */
+        transform: translateX(0%);
+        opacity: 1;
+    }
 }

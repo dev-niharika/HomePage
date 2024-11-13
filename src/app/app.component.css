@@ -14,8 +14,12 @@
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
-    color: #ccc;
+    color: white;
+    border-radius: 20px;
+    background-color: #2e5342 ;
+    border: solid 2px black;
 }
+
 
 /* When you scroll, the navbar background can change */
 .navbar.scrolled {
@@ -23,7 +27,7 @@
 }
 .custnav .navbar-nav {
     flex-direction: row; /* Ensures links are in a row */
-    gap: 15px; /* Adjusts spacing between links */
+    gap: 20px; /* Adjusts spacing between links */
   }
   
   .custnav .mx-auto {
@@ -33,10 +37,10 @@
   .top{
     position: absolute;
     left: 7%;
-    top: 50%;
+    top: 20%;
   }
   .tip{
     position: absolute;
-   
+   top: 1%;
   }
   
