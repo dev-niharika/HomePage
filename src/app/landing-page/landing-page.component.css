@@ -29,7 +29,7 @@
 .content1 {
     position: absolute;
     top: 20%;
-    right: 8%;
+    right: 0.5%;
   
 }
 
@@ -61,20 +61,31 @@
 
 
 .image img {
-    width: 100%; /* Adjust for responsiveness */
-    max-width: 500px; /* Set max width for larger screens */
-    height: auto; /* Maintain aspect ratio */
+        width: 100%; /* Adjust the image size */
+        max-width: 600px; /* Set maximum width for larger screens */
+        height: auto; /* Maintain aspect ratio */
+        margin-top: 120px;
     animation: slideInimage 1.8s ease-out;
 }
 
-.videocss video {
-    width: 100%; /* Adjust for responsiveness */
-    max-width: 500px;
-    height: auto;
-    object-fit: contain;
-    border-radius: 50%;
+.videocss {
+    position: absolute; /* Position the video absolutely over the image */
+    top: 20%; /* Center the video vertically */
+    right: 1.5%; /* Center the video horizontally */
+    transform: translate(-50%, -50%); /* Adjust for perfect centering */
+    z-index: 2; /* Ensure the video is above the image */
+    width: 300px; /* Adjust size as needed */
+    height: 300px;
+    border-radius: 50%; /* Optional: Make the video circular */
+    overflow: hidden; /* Clip video inside the container */
 }
 
+.videocss video {
+    width: 100%; /* Fill the container */
+    height: 116%; /* Fill the container */
+    transform: scale(1.12);
+    object-fit: cover; /* Ensure the video covers the container */
+}
 @keyframes slideInimage {
     from {
          /* Starts off-screen to the left */

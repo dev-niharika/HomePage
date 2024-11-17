@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files 
+
+*{
+    background-color: black;
+  }*/
+
+  body {
+    transition: background-color 0.3s; /* Smooth transition */
+    background-color: black; /* Default color */
+  }
+  body.dark-mode {
+    background-color: rgb(50, 49, 88); /* Dark mode color */
+  }
+
+  body.red-mode {
+    background-color: rgb(199, 37, 37); /* Dark mode color */
+  }

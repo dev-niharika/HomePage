@@ -1,31 +1,62 @@
 /* Apply full-page background image */
-/* about.component.css */
 .main {
-    background: url('/assets/AboutBg.svg') no-repeat center center fixed;
-    background-size: cover;
     min-height: 100vh;
     width: 100%;
 }
   
-
-
-/* Other existing styles */
-
 /* Hero Section */
 .hero-section {
     position: relative;
-    /* Dark overlay */
-    height: 60vh;
+    background-image: url('/assets/bgimage.svg'); /* Correct path */
+    background-size: cover; /* Ensures the image covers the section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    height: 80vh; /* Adjust the height */
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white; /* Ensures text is visible */
 }
 
-.hero-section h1 {
+
+.hero-section h1  {
+    position: relative;
+    font-family: sans-serif;
+    text-transform: uppercase;
     font-size: 3em;
     font-weight: bold;
-    color: white;
-}
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  .hero-section p{
+    margin-top: 50px;
+    position: relative;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+  }
 
 .contact-info-section {
     font-size: 1.2em;

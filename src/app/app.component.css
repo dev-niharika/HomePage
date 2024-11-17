@@ -1,3 +1,5 @@
+
+
 /* Transparent Navigation Bar */
 .navbar {
     position: fixed;
@@ -9,16 +11,6 @@
     
 }
 
-.navbar-dark .navbar-nav .nav-link {
-    color: white; /* Adjust based on background image */
-}
-
-.navbar-dark .navbar-nav .nav-link:hover {
-    color: white;
-    border-radius: 20px;
-    background-color: #2e5342 ;
-    border: solid 2px black;
-}
 
 
 /* When you scroll, the navbar background can change */
@@ -35,12 +27,94 @@
     justify-content: center;
   }
   .top{
-    position: absolute;
-    left: 7%;
-    top: 20%;
+  margin-top: 7px;
+  margin-right: 20px;
   }
-  .tip{
-    position: absolute;
-   top: 1%;
+
+  
+  
+  .nav-item a:hover {
+    box-shadow: 1px 1px 3px 3px #c6ceca;
+   
   }
   
+  
+  
+  .nav-item a {
+    position: relative;
+    padding: 10px;
+    margin: 0px 15px;
+    border-radius: 15px;
+  }
+  
+  .nav-item{
+    gap: 202px;
+   
+  }
+
+  body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
+  }
+  
+ 
+  /* Toggle */
+  
+  .toggle {
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  .toggle-switch {
+    display: inline-block;
+    background: white;
+    border-radius: 16px;
+    width: 50px;
+    height: 30px;
+    position: relative;
+    vertical-align: middle;
+    
+  }
+  .toggle-switch:before, .toggle-switch:after {
+    content: "";
+  }
+  .toggle-switch:before {
+    display: block;
+    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: left 0.25s;
+  }
+  .toggle:hover .toggle-switch:before {
+    background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+  }
+  .toggle-checkbox:checked + .toggle-switch {
+
+    background: rgb(134, 131, 196);
+  }
+  .red:checked+.toggle-switch {
+
+    background: rgb(228, 113, 113);
+  }
+  .toggle-checkbox:checked + .toggle-switch:before {
+
+    left: 25px;
+  }
+  
+  .toggle-checkbox {
+    position: absolute;
+    visibility: hidden;
+  }
+  
+  .toggle-label {
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+  }
