@@ -98,3 +98,68 @@
         opacity: 1;
     }
 }
+
+
+
+.icon-container {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    display: inline-block;
+}
+
+.icon-container i:hover{
+    box-shadow: 1px 1px 3px 3px #c6ceca;
+}
+
+.hidden-icons {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.hidden-icons i {
+    position: absolute;
+    font-size: 30px;
+    opacity: 0;
+    transform: scale(0) translate(-50%, -50%);
+}
+
+@keyframes circularMotion {
+    0% {
+      transform: translate(0, 100px) scale(0.5);
+      opacity: 0.5;
+    }
+    50% {
+      transform: translate(50px, -50px) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(0, -100px) scale(0.5);
+      opacity: 0.5;
+    }
+  }
+
+.hidden-icons.show {
+    opacity: 1;
+}
+
+.hidden-icons.show i {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -50%);
+}
+
+.hidden-icons i:nth-child(1) { 
+    transform: translate(-50%, -50%) rotate(260deg) translate(70px) rotate(-260deg); 
+}
+.hidden-icons i:nth-child(2) { 
+    transform: translate(-50%, -50%) rotate(-60deg) translate(70px) rotate(22deg); 
+}
+.hidden-icons i:nth-child(3) { 
+    transform: translate(-50%, -50%) rotate(-16deg) translate(70px) rotate(-30deg); 
+}
+.hidden-icons i:nth-child(4) { 
+    transform: translate(-50%, -50%) rotate(27deg) translate(70px) rotate(-40deg); 
+}

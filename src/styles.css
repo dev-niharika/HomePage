@@ -8,10 +8,16 @@
     transition: background-color 0.3s; /* Smooth transition */
     background-color: black; /* Default color */
   }
-  body.dark-mode {
+  body.purple-mode {
     background-color: rgb(50, 49, 88); /* Dark mode color */
   }
 
   body.red-mode {
     background-color: rgb(199, 37, 37); /* Dark mode color */
+  }
+  body.blue-mode {
+    background-color: rgb(19 7 37); /* Dark mode color */
+  }
+  body.grey-mode {
+    background-color: #2a2929; /* Dark mode color */
   }
