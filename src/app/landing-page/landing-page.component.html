@@ -1,24 +1,48 @@
-<!-- landing-page.component.html -->
 <div class="content">
   <h1>
     Welcome to Devally <span class="green">Lorem</span>, ipsum dolor sit amet.
   </h1>
-  </div>
-  <div class="icon-container">
-    <i class="fa-solid fa-sun " style="color: gold; border-radius: 70%;font-size: 40px;" (click)="showIcons()"></i>
-    <div class="hidden-icons" [ngClass]="{'show': showHiddenIcons}">
-      <i class="fa-solid fa-circle" style="color: rgb(199, 37, 37); border:2px solid white; border-radius: 50%;" (click)="onToggleChange('red')"></i>
-      <i class="fa-solid fa-circle" style="color:rgb(50, 49, 88); border:2px solid white; border-radius: 50%;" (click)="onToggleChange('purple')"></i>
-      <i class="fa-solid fa-circle" style="color: #2a2929; border:2px solid white;border-radius: 50%;" (click)="onToggleChange('grey')"></i>
-      <i class="fa-solid fa-circle" style="color: rgb(19 7 37); border:2px solid white;border-radius: 50%;" (click)="onToggleChange('blue')"></i>
-    </div>
 </div>
+
+<div class="icon-container">
+  <!-- Toggle icon to show/hide color options -->
+  <i
+    class="fa-solid fa-sun"
+    style="color: gold; border-radius: 70%; font-size: 30px;"
+    (click)="showIcons()"
+  ></i>
+
+  <!-- Color mode icons -->
+  <div class="hidden-icons" [ngClass]="{ show: showHiddenIcons }">
+    <i
+      class="fa-solid fa-circle"
+      style="color: rgb(199, 37, 37); border: 2px solid white; border-radius: 50%;"
+      (click)="onToggleChange('red')"
+    ></i>
+    <i
+      class="fa-solid fa-circle"
+      style="color: rgb(50, 49, 88); border: 2px solid white; border-radius: 50%;"
+      (click)="onToggleChange('purple')"
+    ></i>
+    <i
+      class="fa-solid fa-circle"
+      style="color: #2a2929; border: 2px solid white; border-radius: 50%;"
+      (click)="onToggleChange('grey')"
+    ></i>
+    <i
+      class="fa-solid fa-circle"
+      style="color: rgb(19, 7, 37); border: 2px solid white; border-radius: 50%;"
+      (click)="onToggleChange('blue')"
+    ></i>
+  </div>
+</div>
+
 <div class="content1">
   <div class="videocss text-center">
     <video src="assets/earth1.mp4" autoplay loop muted width="100%"></video>
   </div>
 
   <div class="image text-center">
-    <img src="assets/abouthand.png " alt="handimage" />
+    <img src="assets/abouthand.png" alt="handimage" />
   </div>
 </div>

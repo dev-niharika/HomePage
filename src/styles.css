@@ -1,23 +1,17 @@
-/* You can add global styles to this file, and also import other style files 
-
-*{
-    background-color: black;
-  }*/
-
-  body {
-    transition: background-color 0.3s; /* Smooth transition */
-    background-color: black; /* Default color */
-  }
-  body.purple-mode {
-    background-color: rgb(50, 49, 88); /* Dark mode color */
-  }
-
-  body.red-mode {
-    background-color: rgb(199, 37, 37); /* Dark mode color */
-  }
-  body.blue-mode {
-    background-color: rgb(19 7 37); /* Dark mode color */
-  }
-  body.grey-mode {
-    background-color: #2a2929; /* Dark mode color */
-  }
+body {
+  background: linear-gradient(90deg, #07301d 0%, #090910 35%, #071c12 100%); /* Default background */
+  transition: background 0.5s ease; /* Smooth transition */
+}
+body.purple-mode {
+  background: linear-gradient(90deg, rgb(34, 3, 56) 0%,#1b011d 35%, #0b010f 55%, rgb(32, 5, 63) 100%) ;
+}
+body.red-mode {
+  background:linear-gradient(90deg, #5c1515 0%,#0e0301 35%, #0e0301 55%, #5c1515 100%)
+  /* linear-gradient(to right, #5c1515, rgb(2 0 4),#5c1515);*/
+}
+body.blue-mode {
+ background: linear-gradient(to right, rgb(2 0 4), #13133a, #381e38);
+}
+body.grey-mode {
+  background: linear-gradient(to right, #535151, #0f0d0d, #535151);
+}
