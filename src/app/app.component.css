@@ -13,7 +13,7 @@
 }
 /* When you scroll, the navbar background can change */
 .navbar.scrolled {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(17, 15, 15, 0.7);
   /* Optional: Darker background on scroll */
 }
 .custnav .navbar-nav {
