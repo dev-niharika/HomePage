@@ -1,28 +1,28 @@
-/* Wave Container Styles */
-
-
-
-.content1 {
-    position: absolute;
-    top: 20%;
-    right: 0.5%;
-
-}
-
-.content {
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark mode background */
+    color: #fff;
+  }
+  
+  .main {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-    width: 70%;
-    height: 100vh;
-    /* Full viewport height */
-    color: white;
-    /* Adjust text color */
+    justify-content: center;
+    padding: 84px;
+    
+  }
+  
+  .content {
+    text-align: center;
+    margin-bottom: 20px;
     animation: slideIn 1.8s ease-out;
-    /* Start hidden */
-}
-
-@keyframes slideIn {
+  }
+  @keyframes slideIn {
     from {
         transform: translateX(-100%);
         /* Start off-screen from the left */
@@ -37,66 +37,63 @@
         /* Fade in */
     }
 }
-
-.content h1 {
-    font-size: 4rem;
-    margin: 0;
-    width: 70%;
-}
-
-.content p {
-    width: 60%;
-    margin-top: 40px;
-}
-
-.green {
+  
+  .content h1 {
+    font-size: 3rem;
+    margin-top: 10px;
+  }
+  
+  .content p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  .green {
     color: #07b96a;
-}
-
-
-
-.image img {
+  }
+  
+  .content1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     width: 100%;
-    /* Adjust the image size */
-    max-width: 600px;
-    /* Set maximum width for larger screens */
-    height: auto;
-    /* Maintain aspect ratio */
-    margin-top: 120px;
-    animation: slideInimage 1.8s ease-out;
-}
-
-.videocss {
-    position: absolute;
-    /* Position the video absolutely over the image */
-    top: 20%;
-    /* Center the video vertically */
-    right: 1.5%;
-    /* Center the video horizontally */
-    transform: translate(-50%, -50%);
-    /* Adjust for perfect centering */
-    z-index: 2;
-    /* Ensure the video is above the image */
-    width: 300px;
-    /* Adjust size as needed */
-    height: 300px;
+  }
+  
+  .media-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .videocss {
+    position: relative;
+    width: 100%;
+    max-width: 208px;
+    height: 222px;
+    margin: 0 auto;
     border-radius: 50%;
-    /* Optional: Make the video circular */
     overflow: hidden;
-    /* Clip video inside the container */
-}
-
-.videocss video {
+   
+  }
+  
+  .videocss video {
     width: 100%;
-    /* Fill the container */
-    height: 116%;
-    /* Fill the container */
-    transform: scale(1.12);
+    height: 100%;
     object-fit: cover;
-    /* Ensure the video covers the container */
-}
+  }
+  
 
-@keyframes slideInimage {
+  
+  .image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-top: -80px;
+    animation: slideInimage 1.8s ease-out;
+  }
+  @keyframes slideInimage {
     from {
         /* Starts off-screen to the left */
         transform: translateX(100%);
@@ -112,54 +109,45 @@
 
 
 
-.icon-container {
+  
+  .icon-container {
     position: absolute;
-    bottom: 5%;
-    left: 5%;
-    display: inline-block;
-}
-
-.icon-container i:hover {
-    box-shadow: 1px 1px 3px 3px #c6ceca;
-}
-
-.hidden-icons {
+    top: 70%;
+    left: 10%;
+  }
+  
+  .icon-container i {
+    font-size: 30px;
+    color: gold;
+    border-radius: 50%;
+    cursor: pointer;
+    
+  }
+  .hidden-icons {
     position: absolute;
     top: 30%;
     left: 20%;
     transform: translate(-50%, -50%);
     opacity: 0;
 }
-
 .hidden-icons i {
     position: absolute;
     font-size: 30px;
     opacity: 0;
     transform: scale(0) translate(-50%, -50%);
 }
-
-@keyframes circularMotion {
-    0% {
-        transform: translate(0, 100px) scale(0.5);
-        opacity: 0.5;
-    }
-
-    50% {
-        transform: translate(50px, -50px) scale(1);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translate(0, -100px) scale(0.5);
-        opacity: 0.5;
-    }
-}
-
 .hidden-icons.show {
     opacity: 1;
 }
 
 .hidden-icons.show i {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -50%);
+}
+  .icon-container i:hover {
+    transform: scale(1.2);
+  }
+  .hidden-icons.show i {
     opacity: 1;
     transform: scale(1) translate(-50%, -50%);
 }
@@ -179,176 +167,72 @@
 .hidden-icons i:nth-child(4) {
     transform: translate(-50%, -50%) rotate(27deg) translate(70px) rotate(-40deg);
 }
-
-/* General styles remain the same for laptops */
-
-/* Media queries for mobile devices */
-@media (max-width: 1238px) {
-    .content {
-        width: 100%;
+  @keyframes circularMotion {
+    0% {
+        transform: translate(0, 100px) scale(0.5);
+        opacity: 0.5;
     }
 
-    .content h1 {
-        font-size: 5rem;
-        /* Smaller font for mobile */
-        text-align: center;
-        /* Center-align for better readability */
-        margin: 0 10px;
-        margin-top: 200px;
-        /* Add some horizontal margin */
+    50% {
+        transform: translate(50px, -50px) scale(1);
+        opacity: 1;
     }
 
-    .content1 {
-        top: 23%;
-        /* Adjust position for mobile */
-        right: 313px;
-        /* Center-align content */
-    }
-
-    .image img {
-        width: 80%;
-        max-width: 408px;
-        margin: 49px auto;
-        /* Center the image with vertical spacing */
-    }
-
-    .videocss {
-        width: 100%;
-        max-width: 234px;
-        margin: 0 auto;
-        border-radius: 50%;
-        height: 90%;
-        /* Retain circular shape */
-    }
-
-    .videocss video {
-        width: 100%;
-        /* Fill container width */
-        height: 100%;
-        /* Maintain aspect ratio */
-        object-fit: cover;
-        /* Prevent distortion */
-    }
-
-    .icon-container {
-        left: 10%;
-        /* Adjust position for better accessibility on mobile */
-        bottom: 10%;
-        /* Avoid being too close to the edge */
-    }
-
-    .hidden-icons {
-        top: 50%;
-        /* Adjust positioning for smaller screens */
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .hidden-icons i {
-        font-size: 25px;
-        /* Scale down icons */
-    }
-
-    .videocss {
-        position: absolute;
-        top: -2%;
-        right: 2.5%
+    100% {
+        transform: translate(0, -100px) scale(0.5);
+        opacity: 0.5;
     }
 }
 
-@media (max-width: 778px) {
+
+  
+  /* Media Queries */
+  @media (max-width: 968px) {
     .content h1 {
-        font-size: 1.8rem;
-        margin-bottom: 108px;
-        /* Further scale down for very small screens */
+      font-size: 2.5rem;
     }
-    .content1 {
-        top: 29%;
-        right: 162px;
+  
+    .media-container {
+      flex-direction: column;
     }
-
-    .image img {
-        width: 90%;
-        /* Adjust size for smaller screens */
-        max-width: 250px;
-    }
-
+  
     .videocss {
-        width: 80%;
-        /* Scale video for very small screens */
-        max-width: 139px;
-        height: 83%;
+      width: 80%;
+      height: auto;
     }
-
-    .icon-container {
-        left: 23%;
-        bottom: 11%;
+  
+    .image img {
+      max-width: 300px;
     }
-   
-}
-@media (max-width: 571px) {
+  }
+  
+  @media (max-width: 571px) {
     .content h1 {
-        font-size: 1.8rem;
-        margin-bottom: 108px;
-        /* Further scale down for very small screens */
+      font-size: 1.8rem ;
+      margin-top: 40px;
     }
-    .content1 {
-        top: 29%;
-        right: 162px;
+    .main{
+        flex-direction: column !important;
+        padding: 54px;
+        gap: 40px;
     }
-
+  
+    .content p {
+      font-size: 1rem;
+    }
+  
+    .videocss {
+      width: 100%;
+      max-width: 171px;
+      height: 140px;
+    }
+    
+  
     .image img {
-        width: 90%;
-        /* Adjust size for smaller screens */
-        max-width: 250px;
+      max-width: 250px;
+      margin-top: -50px;
     }
-
-    .videocss {
-        width: 80%;
-        /* Scale video for very small screens */
-        max-width: 139px;
-        height: 83%;
-    }
-    .videocss {
-        position: absolute;
-        top: -2%;
-        right: -15.5%;
-    }
-
-    .icon-container {
-        left: 23%;
-        bottom: 11%;
-    }
-   
-}
-
-@media (max-width: 968px) {
-    .content h1 {
-        font-size: 3.8rem;
-        margin-bottom: -292px;
-        /* Further scale down for very small screens */
-    }
-
-    .image img {
-        width: 100%;
-        max-width: 441px;
-    }
-
-    .videocss {
-        width: 63%;
-        max-width: 224px;
-        height: 87%;
-    }
-
-    .icon-container {
-        left: 16%;
-        /* Further adjustment for very small screens */
-        bottom: 17%;
-    }
-
-    .videocss {
-        position: absolute;
-        top: -2%;
-        right: 10.5%;
-    }
-}
+  
+    
+  }
+  

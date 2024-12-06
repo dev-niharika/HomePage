@@ -121,9 +121,18 @@ body {
 }
 
 @media (max-width: 344px) {
+  .navbar {
+    position: static; /* Change from fixed to static for smaller screens */
+    width: 100%;
+    background: rgba(14, 12, 12, 0.9); /* Adjust transparency to make it more solid if needed */
+    z-index: auto; /* Remove high z-index so it behaves like normal content */
+  }
   .mx-auto ul {
     flex-direction: column !important; 
     gap: 0 !important;
+  }
+  body {
+    margin-top: 0; /* Prevent margin issues caused by the navbar's fixed positioning */
+  }
 }
- 
-}
+

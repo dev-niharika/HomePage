@@ -1,9 +1,20 @@
-<div class="content">
-  <h1>
-    Welcome to Devally <span class="green">Lorem</span>, ipsum dolor sit amet.
-  </h1>
+<div class="main">
+  <div class="content">
+    <h1 class="text-light">
+      Welcome to Devally <span class="green">Lorem</span>, ipsum dolor sit amet.
+    </h1>
+  </div>
+  <div class="content1">
+    <div class="media-container">
+      <div class="videocss">
+        <video src="assets/earth1.mp4" autoplay loop muted></video>
+      </div>
+      <div class="image">
+        <img src="assets/abouthand.png" alt="handimage" />
+      </div>
+    </div>
+  </div>
 </div>
-
 <div class="icon-container">
   <!-- Toggle icon to show/hide color options -->
   <i
@@ -34,15 +45,5 @@
       style="color: rgb(19, 7, 37); border: 2px solid white; border-radius: 50%;"
       (click)="onToggleChange('blue')"
     ></i>
-  </div>
-</div>
-
-<div class="content1">
-  <div class="videocss text-center">
-    <video src="assets/earth1.mp4" autoplay loop muted width="100%"></video>
-  </div>
-
-  <div class="image text-center">
-    <img src="assets/abouthand.png" alt="handimage" />
   </div>
 </div>
