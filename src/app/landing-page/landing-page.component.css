@@ -13,13 +13,13 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 64px;
+    margin-top: 142px;
     
   }
   
   .content {
     text-align: center;
-    margin-bottom: 20px;
+   
     animation: slideIn 1.8s ease-out;
   }
   @keyframes slideIn {
@@ -43,10 +43,7 @@ body {
     margin-top: 10px;
   }
   
-  .content p {
-    font-size: 1.2rem;
-    margin-top: 10px;
-  }
+
   
   .green {
     color: #07b96a;
@@ -65,6 +62,7 @@ body {
     width: 100%;
     max-width: 500px;
     text-align: center;
+    
   }
   
   .videocss {
@@ -112,7 +110,7 @@ body {
   
   .icon-container {
     position: absolute;
-    top: 70%;
+    top: 40%;
     left: 10%;
   }
   
@@ -214,6 +212,7 @@ body {
     .main{
         flex-direction: column !important;
         padding: 54px;
+   margin-top: 0;
         gap: 40px;
     }
   
