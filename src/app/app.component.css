@@ -120,7 +120,7 @@ body {
   top: 2px;
 }
 
-@media (max-width: 344px) {
+@media (max-width: 578px) {
   .navbar {
     position: static; /* Change from fixed to static for smaller screens */
     width: 100%;
